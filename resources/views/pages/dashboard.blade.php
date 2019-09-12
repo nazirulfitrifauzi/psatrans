@@ -447,7 +447,7 @@
             <tbody>
               @forelse ($hqlist as $row)
                   <tr>
-                    <form class="col-md-12" action="dashboard/consignmentHQ/{{ $row->id }}" method="post">
+                    <form class="col-md-12" action="{{ route('dashboard.consignmentHQ.update',$row->id) }}" method="post">
                       @method('PATCH')
                       @csrf
                       <td align="center">{{ date_format($row['cn_datetime'], "d M Y") }}</td>
