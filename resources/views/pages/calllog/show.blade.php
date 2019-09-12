@@ -399,7 +399,7 @@
           </div>
         @endif
         <div class="col-12 px-0 py-4">
-          <form class="needs-validation" action="/call/{{ $calldata->id }}" method="post">
+          <form class="needs-validation" action="/{{ route('call.update',$calldata->id) }}" method="post">
             @method('PATCH')
             @csrf
 
