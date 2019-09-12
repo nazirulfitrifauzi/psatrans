@@ -83,7 +83,7 @@ Consignment South
           <tbody>
             @forelse ($southlist as $row)
                 <tr>
-                  <form class="col-md-12" action="consignmentSouth/{{ $row->id }}" method="post">
+                  <form class="col-md-12" action="{{ route('dashboard.consignmentSouth.update',$row->id) }}" method="post">
                     @method('PATCH')
                     @csrf
 
