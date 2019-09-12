@@ -83,7 +83,7 @@ Consignment HQ
           <tbody>
             @forelse ($hqlist as $row)
                 <tr>
-                  <form class="col-md-12" action="consignmentHQ/{{ $row->id }}" method="post">
+                  <form class="col-md-12" action="{{ route('dashboard.consignmentHQ.update',$row->id)  }}" method="post">
                     @method('PATCH')
                     @csrf
 
