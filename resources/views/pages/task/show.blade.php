@@ -399,7 +399,7 @@
         @endif
 
         <div class="col-12 col-xl-10 px-0 py-4">
-          <form class="needs-validation" action="/task/{{ $taskdata->id }}" method="post">
+          <form class="needs-validation" action="{{ route('task.update',$taskdata->id) }}" method="post">
             @method('PATCH')
             @csrf
 
